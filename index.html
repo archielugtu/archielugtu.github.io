@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rchi Lugtu | Software Engineer</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+<body>
+
+    <div id="overlay" onclick="off()"></div>
+
+    <div id="navbar">
+        <div class="nav-burger" onclick="toggleSidebar()">
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+        </div>
+        <div class="nav-title">
+            <a href="#intro">Rchi Lugtu</h1>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <ul class="menu">
+            <li class="menu-title">
+                <a href="#intro" onclick="toggleSidebarBtn()">
+                    <h1>Rchi Lugtu</h1>
+                    <span>Software Engineer</span>
+                    <a href="https://www.linkedin.com/in/rchi-lugtu" target="_blank"><i class="fab fa-linkedin fa-lg" style="margin-right: 10px;"></i></a>
+                    <a href="https://github.com/rchilugtu" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://drive.google.com/file/d/1t8dxgSn9nQeZgC_VjL1knK1Ud_Uun3q5/view?usp=sharing" target="_blank" title="See resume"><i class="fas fa-user-graduate fa-lg"></i></a>
+                </a> 
+            </li>
+            <li class="menu-item active">
+                <a href="#about" onclick="toggleSidebarBtn()">
+                    <i class="fas fa-user fa-lg"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <!-- <li class="menu-item">
+                <a href="#experience" onclick="toggleSidebarBtn()">
+                    <i class="fas fa-chart-line fa-lg"></i>
+                    <span>Experience</span>
+                </a>
+            </li> -->
+            <li class="menu-item">
+                <a href="#projects" onclick="toggleSidebarBtn()">
+                    <i class="fas fa-window-restore fa-lg"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact" onclick="toggleSidebarBtn()">
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <main id="content">
+        <section id="intro">
+            <div class="typewriter">
+                <h1 class="intro-text">Hi, I'm <span>Rchi Lugtu</span></h1>
+            </div>
+            
+        </section>
+        <section id="about">
+            <h2 class="content-header">About</h2>
+            <div class="container">
+                <blockquote>
+                    An adaptable, passionate, and open-minded Fourth Year Software Engineering 
+                    student with a strong work ethic. 
+                </blockquote>
+                <p>
+                    Growing up, I had the passion, drive and ability to solve complicated problems. 
+                    This career choice definitely gives me the opportunity to continue to develop my 
+                    skills and apply them in a practical way to benefit current world developments. 
+                </p>
+                <p>
+                    I am a self motivated person and genuinely enjoy learning new technologies
+                    and using them in my projects. I have a positive attitude towards learning things that will challenge me and will 
+                    further broaden my knowledge for my future career, as a Software Engineer.
+                </p>
+                <p>
+                    <strong>Current focus</strong>: 
+                    <span style="color: #5392D2">React</span>&nbsp;//
+                    <span style="color: #5392D2">Node.js</span>&nbsp;//
+                    <span style="color: #5392D2">AWS</span>
+                </p>
+
+                <p class="account-links">
+                    <a href="https://www.linkedin.com/in/rchi-lugtu" target="_blank" title="View linkedin"><i class="fab fa-linkedin fa-2x" style="margin-right: 10px;"></i></a>
+                    <a href="https://github.com/rchilugtu" target="_blank" title="View github"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://drive.google.com/file/d/1t8dxgSn9nQeZgC_VjL1knK1Ud_Uun3q5/view?usp=sharing" target="_blank" title="See resume"><i class="fas fa-user-graduate fa-2x"></i></a>
+                </p>
+            </div>
+        </section>
+        <!-- <section id="experience">
+            <h2 class="content-header">Experience</h2>
+            <div class="container">
+                
+            </div>
+        </section> -->
+        <section id="projects">
+            <h2 class="content-header">Projects</h2>
+            <div class="container">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/waypoint.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">WayPoint</h3>
+                                <p class="card-info">
+                                    A full-stack web application used by people who want to challenge themselves and others around 
+                                    them in outdoor, sports, and leisure activities.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments: 
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Frontend</strong>: Vue.js, Bulma CSS</li>
+                                    <li><strong>Backend</strong>: Java Spring, MariaDB</li>
+                                    <li><strong>Testing</strong>: Jest, Junit, Cucumber</li>
+                                    <li><strong>Other</strong>: Git, Gradle, Vuex</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/WayPoint" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://www.youtube.com/watch?v=09_prK-Scys" target="_blank" title="View demo"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/yelpcamp.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">YelpCamp</h3>
+                                <p class="card-info">
+                                    An informative web application that allows people to connect to others from all 
+                                    around the world by sharing their campground experiences.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Frontend</strong>: Bootstrap CSS, EJS</li>
+                                    <li><strong>Backend</strong>: Node.js, Express.js, MongoDB, Mongoose</li>
+                                    <li><strong>Security</strong>: Joi, Passport.js</li>
+                                    <li><strong>Other</strong>: Mapbox (map display), Cloudinary (storing images), Express-session</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/YelpCamp" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://yelpcampsites.herokuapp.com/" target="_blank" title="View live"><i class="fas fa-external-link-alt fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/foodbyte.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">FoodByte</h3>
+                                <p class="card-info">
+                                    A popup point of food sale application suitable for food trucks and other similar platforms.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Frontend</strong>: Java JavaFX, </li>
+                                    <li><strong>Backend</strong>: No database (uses XML for fake data response)</li>
+                                    <li><strong>Testing</strong>: Junit, Cucumber</li>
+                                    <li><strong>Other</strong>: Git, IntelliJ IDEA</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/FoodByte" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://drive.google.com/file/d/1fT2T_VnEyQHScvIwlbTRPIj12YdrRQ8-/view?usp=sharing" target="_blank" title="View design doc"><i class="fas fa-external-link-alt fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/dessert.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Dessert Museum</h3>
+                                <p class="card-info">
+                                    A 3D graphics world application, that displays an OpenGL Museum and 
+                                    exhibits multiple OpenGL models inside.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Technologies</strong>: C++, OpenGL</li>
+                                    <li><strong>Computer Graphics Theories Applied</strong>: Transformations, Lighting, Projections, Texture mapping, Shadow generation</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/Dessert-Museum" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://drive.google.com/file/d/187Yb_f82EsVndHw1TjK4XvsmKSFKkMGO/view?usp=sharing" target="_blank" title="View report"><i class="fas fa-external-link-alt fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/petitionsite.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Petition Website</h3>
+                                <p class="card-info">
+                                    A fullstack web application that is similar to the change.org website, it follows an API-first approach. The web server implements a RESTful API.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Frontend</strong>: Vue.js, Bulma/Buefy CSS</li>
+                                    <li><strong>Backend</strong>: Node.js, Express.js, MySQL</li>
+                                    <li><strong>Other</strong>: Vuex, Git </li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/Petition-Website-Client" target="_blank" title="View Client code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://github.com/rchilugtu/Petition-Website-Server" target="_blank" title="View Server code"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/raytracer.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Ray Tracer</h3>
+                                <p class="card-info">
+                                    A ray tracer program that demonstrates its capability in enhancing the visual realism of a rendered scene.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Technologies</strong>: C++</li>
+                                    <li><strong>Key Models</strong>: Cone, Transparent and Refracted Sphere, Anti-Aliasing, Procedural Pattern, Fog</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/Ray-Tracer" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://drive.google.com/file/d/1ofboaLM3w0XBCqh8T__29FddvMgfQr3H/view?usp=sharing" target="_blank" title="View report"><i class="fas fa-external-link-alt fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-header">
+                                <img src="/space-explorer.png" alt="Avatar">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Space Survivor</h3>
+                                <p class="card-info">
+                                    A simple object-oriented, point and click game. This project was aimed to practice software development processes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-popup">
+                            <div class="popup-body">
+                                <div class="popup-title">
+                                    Accomplishments
+                                    <a nohref class="popup-x-btn"><i class="fas fa-times fa-sm"></i></a>
+                                </div>
+                                <ul>
+                                    <li><strong>Technologies</strong>: Java, WindowBuilder</li>
+                                    <li><strong>Other</strong>: Git, Eclipse</li>
+                                </ul>
+                            </div>
+                            <div class="popup-footer">
+                                <a href="https://github.com/rchilugtu/Space-Survivor" target="_blank" title="View code"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="content-header">Contact</h2>
+            <div class="container">
+                <p><a href="https://www.linkedin.com/in/rchi-lugtu/" target="_blank"><i class="fab fa-linkedin fa-lg"></i>linkedin.com/in/rchi-lugtu</a></p>
+                <p><a href="https://github.com/rchilugtu" target="_blank"><i class="fab fa-github fa-lg"></i>github.com/rchilugtu</a></p>
+                <p><a href="mailto: lugturchi@gmail.com" target="_blank"><i class="fas fa-at fa-lg"></i>lugturchi@gmail.com</a></p>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/index.js"></script>
+
+</body>
+</html>

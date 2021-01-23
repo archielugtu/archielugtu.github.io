@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+/*===== VARIABLES CSS =====*/
+:root{
+    --sidebar-width: 190px;
+    --happy-blue: #5392D2;
+    --happy-brown: #795548;
+    --card-height: 400px;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+/*
+    ======================
+    ===== Sidebar CSS ====
+    ======================
+ */
+
+#sidebar {
+    position: fixed;
+    float: left;
+    width: var(--sidebar-width);
+    height: 100%;
+    transition: left 0.3s;
+    background-color:whitesmoke;
+    -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
+    -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
+    box-shadow: 1px 0 5px 0 #aaaaaa;
+    z-index: 999;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 998; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#sidebar .menu-title {
+    height: 160px;
+    width: 100%;
+    padding: 30px 20px 5px 38px;
+    border-bottom: 2px solid #d3d3d3;
+}
+
+#sidebar .menu-title h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--happy-blue);
+}
+
+#sidebar .menu-title span {
+    line-height: 35px;
+    color: var(--happy-brown);
+}
+
+.menu .menu-item a {
+    color: #333333;
+    font-size: 15px;
+    display: block;
+    box-sizing: border-box;
+    line-height: 50px;
+    padding-left: 30px;
+    transition: border-left 0.5s;
+}
+
+.menu .menu-item a.active {
+    border-left: 6px solid red;
+    background-color: #f9f1f1;
+}
+
+.menu .menu-item a:hover {
+    border-left: 6px solid red;
+    background-color: #f9f1f1;
+}
+
+.fab, .fas, .far {
+    margin-right: 10px;
+    color: var(--happy-brown);
+}
+
+.fa-user {
+    color: var(--happy-blue);
+}
+.fa-chart-line {
+    color: #50C32B;
+}
+.fa-window-restore {
+    color: #FE6B64;
+}
+.fa-envelope {
+    color: #B29DD9;
+}
+
+/*
+    ======================
+    ===== Content CSS ====
+    ======================
+ */
+
+#content {
+    position: relative;
+    display: block;
+    margin-left: 190px;
+    height: 100%;
+    background: url('/bg.png') repeat;
+}
+
+#content section {
+    position: relative;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.content-header {
+    background-color: var(--happy-blue);
+    padding: 25px 40px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+
+/* 
+    INTRO CONTENT SECTION 
+*/
+#content #intro {
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/intro-cover.jpeg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #intro h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#content #intro .intro-text span {
+    border-bottom: 5px solid white;
+}
+
+
+/* 
+    ABOUT CONTENT SECTION 
+*/
+
+blockquote {
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    padding: 0 0 0 20px;
+    margin: 20px 0;
+    border-left: 3px solid var(--happy-brown);
+    color: var(--happy-brown);
+}
+
+
+#about p {
+    font-size: 1.5rem;
+    line-height: 40px;
+    margin: 20px 0;
+}
+
+#about p.account-links {
+    text-align:center; 
+    margin-bottom: 0; 
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #d3d3d3;
+}
+
+
+/* 
+    EXPERIENCE CONTENT SECTION 
+*/
+
+
+/* 
+    CONTACT CONTENT SECTION 
+*/
+#contact a {
+    font-size: 2rem;
+    line-height: 53px;
+}
+
+
+/* 
+    PROJECTS CONTENT SECTION 
+*/
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    height: var(--card-height);
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.card-container {
+    cursor: pointer;
+}
+
+.card-header img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 10px 20px 30px 20px;
+}
+
+.card-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--happy-blue);
+    font-weight: 500;
+}
+
+.card-info {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+/* POPUP CARD REVEAL */
+.card-popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: var(--card-height);
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.card-popup.active {
+    top: 0;
+}
+
+.card-popup .popup-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--happy-brown);
+}
+
+
+.popup-title a {
+    float: right;
+    color: var(--happy-brown);
+    cursor: pointer;
+}
+
+.popup-body {
+    padding: 25px;
+}
+
+.popup-body li {
+    list-style: disc;
+    list-style-position: outside;
+    line-height: 30px;
+    height: 100%;
+}
+
+.popup-body ul {
+    padding-left: 23px;
+}
+
+.popup-footer{
+    color: var(--happy-brown);
+    margin-top: auto;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* 
+    CONTACT CONTENT SECTION 
+*/
+#contact {
+    height: 600px;
+}
+
+#contact a {
+    color: var(--happy-blue)
+}
+
+strong {
+    font-weight: 500;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .1em solid var(--happy-blue);
+    margin: 0 auto;
+    animation: 
+        typing 3s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}  
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--happy-blue); }
+}
+
+/*
+    ======================
+    ===== Navbar CSS =====
+    ======================
+ */
+
+#navbar {
+    display: flex;
+    position: fixed;
+    top: -48px;
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 20;
+}
+
+#navbar .nav-burger {
+    position: relative;
+    right: -20px;
+    z-index: 2;
+}
+
+#navbar .nav-burger-line {
+    position: relative;
+    width: 33px;
+    height: 3px;
+    background-color: var(--happy-blue);
+    margin: 5px 0;
+}
+
+#navbar .nav-title {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.nav-title a {
+    color: var(--happy-blue);
+}
+
+@media (max-width: 992px) {
+    /*
+    ======================
+    ===== Navbar CSS =====
+    ======================
+    */
+    #navbar {
+        -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
+        -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
+        box-shadow: 1px 0 5px 0 #aaaaaa;
+        top: 0;
+    }
+
+    /*
+    ======================
+    ===== Sidebar CSS ====
+    ======================
+    */
+    #sidebar {
+        position: fixed;
+        left: -195px;
+    }
+
+    /*
+    ======================
+    ===== Content CSS ====
+    ======================
+    */
+    #content {
+        margin-left: 0;
+    }
+
+    .content-header {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    #content section {
+        padding-top: 48px;
+    }
+
+    #content #intro {
+        margin-bottom: -48px;
+        background-position-x: 20%;
+    }
+    #content #intro .intro-text {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    #content #intro {
+        background-position-x: 40%;
+    }
+    #content #intro .intro-text {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    blockquote {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    #content section {
+        padding-bottom: 0;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    #contact a {
+        font-size: 1.3rem;
+    }
+}
