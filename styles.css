@@ -317,6 +317,7 @@ blockquote {
     color: var(--happy-brown);
     margin-top: auto;
     padding: 20px;
+    border-top: 1px solid #d3d3d3;
 }
 
 .card:hover {
@@ -406,7 +407,20 @@ strong {
     color: var(--happy-blue);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1300px) {
+    .card-popup .popup-title {
+        font-size: 1.2rem;
+    }
+
+    .popup-body li {
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+
+
+}
+
+@media (max-width: 1088px) {
     /*
     ======================
     ===== Navbar CSS =====
@@ -463,7 +477,7 @@ strong {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 735px) {
     #content #intro {
         background-position-x: 40%;
     }
@@ -494,5 +508,9 @@ strong {
 
     #contact a {
         font-size: 1.3rem;
+    }
+
+    .card-popup .popup-title {
+        font-size: 1rem;
     }
 }
