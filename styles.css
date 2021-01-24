@@ -119,7 +119,7 @@ body a{
 .fab, .fas, .far {
     margin-right: 10px;
     color: var(--happy-brown);
-    transition: 0.3s
+    transition: 0.2s
 }
 
 .fab:hover, .fas:hover, .far:hover {
@@ -266,6 +266,12 @@ blockquote {
     margin-bottom: 50px;
     transition: 0.3s;
     overflow: hidden;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-container {
@@ -342,11 +348,6 @@ blockquote {
     margin-top: auto;
     padding: 20px;
     border-top: 1px solid #d3d3d3;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
 
