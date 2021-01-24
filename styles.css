@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
-/*===== VARIABLES CSS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');/*===== VARIABLES CSS =====*/
 :root{
     --sidebar-width: 190px;
     --happy-blue: #5392D2;
@@ -67,7 +66,7 @@ body a{
 
 #sidebar .menu-title h1 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 30px;
     color: var(--happy-blue);
 }
@@ -84,23 +83,50 @@ body a{
     box-sizing: border-box;
     line-height: 50px;
     padding-left: 30px;
-    transition: border-left 0.5s;
+    transition: border-left 0.3s;
 }
 
-.menu .menu-item a.active {
-    border-left: 6px solid red;
+.menu-item #about-link.active {
+    border-left: 6px solid var(--happy-blue);
     background-color: #f9f1f1;
 }
 
-.menu .menu-item a:hover {
-    border-left: 6px solid red;
+.menu-item #projects-link.active {
+    border-left: 6px solid #ff2015;
+    background-color: #f9f1f1;
+}
+
+.menu-item #contact-link.active {
+    border-left: 6px solid #ff8c00;
+    background-color: #f9f1f1;
+}
+
+.menu-item #about-link:hover {
+    border-left: 6px solid var(--happy-blue);
+    background-color: #f9f1f1;
+}
+
+.menu-item #projects-link:hover {
+    border-left: 6px solid #ff2015;
+    background-color: #f9f1f1;
+}
+
+.menu-item #contact-link:hover {
+    border-left: 6px solid #ff8c00;
     background-color: #f9f1f1;
 }
 
 .fab, .fas, .far {
     margin-right: 10px;
     color: var(--happy-brown);
+    transition: 0.3s
 }
+
+.fab:hover, .fas:hover, .far:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
 
 .fa-user {
     color: var(--happy-blue);
@@ -109,10 +135,10 @@ body a{
     color: #50C32B;
 }
 .fa-window-restore {
-    color: #FE6B64;
+    color: #ff2015;
 }
 .fa-envelope {
-    color: #B29DD9;
+    color: #ff8c00;
 }
 
 /*
@@ -167,14 +193,12 @@ body a{
 }
 
 #content #intro h1 {
+    position: relative;
     font-size: 3.5rem;
-    font-weight: 400;
+    font-weight: 300;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     color: white;
-}
-
-#content #intro .intro-text span {
-    border-bottom: 5px solid white;
+    height: 60px;
 }
 
 
@@ -260,7 +284,7 @@ blockquote {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--happy-blue);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .card-info {
@@ -347,7 +371,7 @@ strong {
     border-right: .1em solid var(--happy-blue);
     margin: 0 auto;
     animation: 
-        typing 3s steps(40, end),
+        typing 2.5s steps(40, end),
         blink-caret .75s step-end infinite;
 }
 
@@ -468,7 +492,7 @@ strong {
         margin-bottom: -48px;
         background-position-x: 20%;
     }
-    #content #intro .intro-text {
+    #content #intro #intro-text {
         font-size: 3rem;
     }
 
@@ -481,7 +505,7 @@ strong {
     #content #intro {
         background-position-x: 40%;
     }
-    #content #intro .intro-text {
+    #content #intro #intro-text {
         font-size: 2rem;
     }
 
