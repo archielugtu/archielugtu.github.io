@@ -70,7 +70,7 @@ body a{
     font-size: 2rem;
     font-weight: 100;
     line-height: 30px;
-    color: var(--happy-blue);
+    color: #5392D2;
 }
 
 #sidebar .menu-title span {
@@ -197,7 +197,7 @@ body a{
     -moz-background-size:  cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed; /* doesn't work for apple phones */
+    /* background-attachment: fixed; doesn't work for apple phones*/
     display: flex;
     justify-content: center;
     align-items: center;
