@@ -481,6 +481,9 @@ footer {
 }
 
 @media (max-width: 1300px) {
+    .exp-card {
+        width: 90%;
+    }
     .card-popup .popup-title {
         font-size: 1.2rem;
     }
