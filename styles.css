@@ -60,9 +60,9 @@ body a{
 }
 
 #sidebar .menu-title {
-    height: 160px;
+    height: 100%;
     width: 100%;
-    padding: 30px 20px 5px 38px;
+    padding: 20px 20px 5px 38px;
     border-bottom: 2px solid #d3d3d3;
 }
 
@@ -204,20 +204,9 @@ body a{
 
 }
 
-#intro h1 {
-    position: relative;
-    font-size: 3.5rem;
-    font-weight: 300;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    height: 60px;
-}
-
-
 /* 
     ABOUT CONTENT SECTION 
 */
-
 blockquote {
     font-size: 2rem;
     font-weight: 400;
@@ -418,26 +407,33 @@ footer {
     margin-bottom: 20px;
 }
 
-.typewriter h1 {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .1em solid var(--happy-blue);
-    margin: 0 auto;
-    animation: 
-        typing 2.5s steps(25, end),
-        blink-caret .75s step-end infinite;
+/* Typing effect */
+#intro-text {
+	display: inline-block;
+	vertical-align: middle;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    letter-spacing: 2px;
 }
 
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}  
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 50px;
+	background-color: white;
+	animation: blink .75s step-end infinite;
+}
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--happy-blue); }
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: white; 
+	}
 }
 
 /*
@@ -544,7 +540,7 @@ footer {
         margin-bottom: -48px;
         background-position-x: 20%;
     }
-    #content #intro #intro-text {
+    #intro #intro-text {
         font-size: 3rem;
     }
     
@@ -566,8 +562,8 @@ footer {
     #content #intro {
         background-position-x: 40%;
     }
-    #content #intro #intro-text {
-        font-size: 2rem;
+    #intro #intro-text {
+        font-size: 1.5rem;
     }
 
     .container {
