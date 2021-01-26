@@ -62,6 +62,6 @@ const scroll = new SmoothScroll('#sidebar a[href*="#"], #navbar a[href*="#"]', {
 // Intro H1 Parallax
 let introText = document.querySelector('#intro-text');
 window.addEventListener('scroll', function() {
-    const value = window.scrollY;
-    introText.style.top = value * 0.25 + 'px';
+    const value = window.pageYOffset;
+    introText.style.top = value * 0.55 + 'px';
 })

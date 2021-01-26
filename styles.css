@@ -190,19 +190,20 @@ body a{
 /* 
     INTRO CONTENT SECTION 
 */
-#content #intro {
+#intro {
     height: 100vh;
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/intro-cover.jpeg') no-repeat;
     -webkit-background-size: cover;
     -moz-background-size:  cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#content #intro h1 {
+#intro h1 {
     position: relative;
     font-size: 3.5rem;
     font-weight: 300;
