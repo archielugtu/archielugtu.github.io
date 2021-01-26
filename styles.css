@@ -197,10 +197,11 @@ body a{
     -moz-background-size:  cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; doesn't work for apple phones*/
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #intro h1 {
