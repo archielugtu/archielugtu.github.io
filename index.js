@@ -58,6 +58,8 @@ const scroll = new SmoothScroll('#sidebar a[href*="#"], #navbar a[href*="#"]', {
     speed: 500
 });
 
+
+// Intro H1 Parallax
 let introText = document.querySelector('#intro-text');
 window.addEventListener('scroll', function() {
     const value = window.scrollY;

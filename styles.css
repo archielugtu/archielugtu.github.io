@@ -3,7 +3,8 @@
     --sidebar-width: 190px;
     --happy-blue: #5392D2;
     --happy-brown: #795548;
-    --card-height: 400px;
+    --happy-green: #50C32B;
+    --card-height: 100%;
 }
 
 *,::before,::after{
@@ -13,6 +14,7 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 body a{
@@ -83,48 +85,55 @@ body a{
     box-sizing: border-box;
     line-height: 50px;
     padding-left: 30px;
-    transition: border-left 0.3s;
+    transition: border-left 0.5s;
 }
 
-.menu-item #about-link.active {
-    border-left: 6px solid var(--happy-blue);
-    background-color: #f9f1f1;
+
+#about-link:hover {
+    border-left: 10px solid var(--happy-blue);
+    background-color: #f9f1ff;
+}
+#experience-link:hover {
+    border-left: 10px solid var(--happy-green);
+    background-color: #f9f1ff;
+}
+#projects-link:hover {
+    border-left: 10px solid #ff2015;
+    background-color: #f9f1ff;
+}
+#contact-link:hover {
+    border-left: 10px solid #ff8c00;
+    background-color: #f9f1ff;
 }
 
-.menu-item #projects-link.active {
-    border-left: 6px solid #ff2015;
-    background-color: #f9f1f1;
-}
 
-.menu-item #contact-link.active {
-    border-left: 6px solid #ff8c00;
-    background-color: #f9f1f1;
-}
-
-.menu-item #about-link:hover {
-    border-left: 6px solid var(--happy-blue);
-    background-color: #f9f1f1;
-}
-
-.menu-item #projects-link:hover {
-    border-left: 6px solid #ff2015;
-    background-color: #f9f1f1;
-}
-
-.menu-item #contact-link:hover {
-    border-left: 6px solid #ff8c00;
-    background-color: #f9f1f1;
-}
 
 .fab, .fas, .far {
     margin-right: 10px;
     color: var(--happy-brown);
-    transition: 0.2s
+    transition: 0.5s;
 }
-
+.fa-github:hover {
+    color: black;
+}
+.fa-linkedin:hover {
+    color: var(--happy-blue)
+}
+.fa-youtube:hover {
+    color: red;
+}
+.fa-at:hover {
+    color: darkorange;
+}
+.fa-user-graduate:hover {
+    color: darkorange;
+}
+.fa-external-link-alt:hover {
+    color: darkgoldenrod;
+}
 .fab:hover, .fas:hover, .far:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.5);
+    /* box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25); */
 }
 
 
@@ -171,6 +180,7 @@ body a{
 }
 
 .container {
+    position: relative;
     width: 85%;
     margin: 0 auto;
     max-width: 1280px;
@@ -235,16 +245,47 @@ blockquote {
 /* 
     EXPERIENCE CONTENT SECTION 
 */
-
-
-/* 
-    CONTACT CONTENT SECTION 
-*/
-#contact a {
-    font-size: 2rem;
-    line-height: 53px;
+.exp-card {
+    position: relative;
+    width: 70%;
+    margin: 0 auto 15px auto;
+    padding: 10px 45px 10px 45px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
+.exp-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.exp-card .card-name {
+    margin-left: 15px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.card-name .job {
+    display: block;
+    font-size: 1rem;
+    color: var(--happy-brown)
+}
+
+.card-name .date {
+    font-size: 1rem;
+    line-height: 1px;
+}
+
+.exp-card li {
+    list-style-position: inside;
+    line-height: 35px;
+}
 
 /* 
     PROJECTS CONTENT SECTION 
@@ -260,12 +301,13 @@ blockquote {
 .card {
     position: relative;
     width: 30%;
-    height: var(--card-height);
+    min-height: var(--card-height);
     background: #fff;
     border: 1px solid #ccc;
     margin-bottom: 50px;
-    transition: 0.3s;
+    transition: 0.5s;
     overflow: hidden;
+    border-radius: 20px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -304,10 +346,10 @@ blockquote {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     top: var(--card-height);
     background-color: #fff;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .card-popup.active {
@@ -332,11 +374,12 @@ blockquote {
     padding: 25px;
 }
 
-.popup-body li {
+li {
     list-style: disc;
     list-style-position: outside;
     line-height: 30px;
     height: 100%;
+    font-size: 0.9rem;
 }
 
 .popup-body ul {
@@ -350,7 +393,6 @@ blockquote {
     border-top: 1px solid #d3d3d3;
 }
 
-
 /* 
     CONTACT CONTENT SECTION 
 */
@@ -359,11 +401,19 @@ blockquote {
 }
 
 #contact a {
-    color: var(--happy-blue)
+    color: var(--happy-blue);
+    font-size: 2rem;
+    line-height: 53px;
 }
 
 strong {
     font-weight: 500;
+}
+
+footer { 
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .typewriter h1 {
@@ -372,7 +422,7 @@ strong {
     border-right: .1em solid var(--happy-blue);
     margin: 0 auto;
     animation: 
-        typing 2.5s steps(40, end),
+        typing 2.5s steps(25, end),
         blink-caret .75s step-end infinite;
 }
 
@@ -438,7 +488,6 @@ strong {
     }
 
     .popup-body li {
-        font-size: 0.8rem;
         line-height: 20px;
     }
 
@@ -496,9 +545,18 @@ strong {
     #content #intro #intro-text {
         font-size: 3rem;
     }
+    
+    /* Experience Card */
+    .exp-card {
+        width: 90%
+    }
+    .exp-card li {
+        line-height: 25px;
+    }
 
+    /* Project Card */
     .card {
-        width: 40%;
+        width: 45%;
     }
 }
 
@@ -511,7 +569,7 @@ strong {
     }
 
     .container {
-        width: 85%;
+        width: 90%;
     }
 
     blockquote {
@@ -527,15 +585,34 @@ strong {
         padding-bottom: 0;
     }
 
+    /* Experience card */
+    .exp-card {
+        width: 95%
+    }
+    .exp-card-header {
+        display: block;
+        text-align: center;
+    }
+
+    .exp-card .card-name {
+        font-size: 1.5rem;
+    }
+
+    /* Project Card */
     .card {
-        width: 80%;
+        width: 90%;
     }
 
     #contact a {
         font-size: 1.3rem;
+        line-height: 40px;
     }
 
     .card-popup .popup-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .popup-body li {
+        line-height: 20px;
     }
 }
