@@ -4,7 +4,7 @@
     --happy-blue: #72c2e7;
     --happy-brown: #795548;
     --happy-green: #50C32B;
-    --card-height: 100%;
+    --card-height: 400px;
 }
 
 *,::before,::after{
@@ -338,7 +338,7 @@ blockquote {
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    top: var(--card-height);
+    top: 500px;
     background-color: #fff;
     transition: 0.5s;
 }
