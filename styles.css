@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');/*===== VARIABLES CSS =====*/
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap"); /*===== VARIABLES CSS =====*/
+:root {
     --sidebar-width: 190px;
-    --happy-blue: #72c2e7;
+    --happy-blue: #509ec2;
     --happy-brown: #795548;
-    --happy-green: #50C32B;
+    --happy-green: #50c32b;
     --card-height: 400px;
 }
 
-*,::before,::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
@@ -17,7 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-body a{
+body a {
     text-decoration: none;
     color: black;
 }
@@ -34,7 +36,7 @@ body a{
     width: var(--sidebar-width);
     height: 100%;
     transition: left 0.3s;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
     -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
     box-shadow: 1px 0 5px 0 #aaaaaa;
@@ -54,7 +56,7 @@ body a{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
     z-index: 998; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
@@ -70,7 +72,7 @@ body a{
     font-size: 2rem;
     font-weight: 100;
     line-height: 30px;
-    color: #5392D2;
+    color: #5392d2;
 }
 
 #sidebar .menu-title span {
@@ -87,7 +89,6 @@ body a{
     padding-left: 30px;
     transition: border-left 0.5s;
 }
-
 
 #about-link:hover {
     border-left: 10px solid var(--happy-blue);
@@ -106,9 +107,9 @@ body a{
     background-color: #f9f1ff;
 }
 
-
-
-.fab, .fas, .far {
+.fab,
+.fas,
+.far {
     margin-right: 10px;
     color: var(--happy-brown);
     transition: 0.5s;
@@ -117,7 +118,7 @@ body a{
     color: black;
 }
 .fa-linkedin:hover {
-    color: var(--happy-blue)
+    color: var(--happy-blue);
 }
 .fa-youtube:hover {
     color: red;
@@ -131,17 +132,18 @@ body a{
 .fa-external-link-alt:hover {
     color: darkgoldenrod;
 }
-.fab:hover, .fas:hover, .far:hover {
+.fab:hover,
+.fas:hover,
+.far:hover {
     transform: scale(1.5);
     /* box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25); */
 }
-
 
 .fa-user {
     color: var(--happy-blue);
 }
 .fa-chart-line {
-    color: #50C32B;
+    color: #50c32b;
 }
 .fa-window-restore {
     color: #ff2015;
@@ -161,7 +163,7 @@ body a{
     display: block;
     margin-left: 190px;
     height: 100%;
-    background: url('/bg.png') repeat;
+    background: url("/bg.png") repeat;
 }
 
 #content section {
@@ -186,22 +188,21 @@ body a{
     max-width: 1280px;
 }
 
-
 /* 
     INTRO CONTENT SECTION 
 */
 #intro {
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/intro-cover.jpeg') no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("/intro-cover.jpeg") no-repeat;
     -webkit-background-size: cover;
-    -moz-background-size:  cover;
+    -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     /* background-attachment: fixed; doesn't work for apple phones*/
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 /* 
@@ -217,7 +218,6 @@ blockquote {
     color: var(--happy-brown);
 }
 
-
 #about p {
     font-size: 1.5rem;
     line-height: 40px;
@@ -225,13 +225,12 @@ blockquote {
 }
 
 #about p.account-links {
-    text-align:center; 
-    margin-bottom: 0; 
+    text-align: center;
+    margin-bottom: 0;
     margin-top: 30px;
     padding-top: 15px;
     border-top: 1px solid #d3d3d3;
 }
-
 
 /* 
     EXPERIENCE CONTENT SECTION 
@@ -265,7 +264,7 @@ blockquote {
 .card-name .job {
     display: block;
     font-size: 1rem;
-    color: var(--happy-brown)
+    color: var(--happy-brown);
 }
 
 .card-name .date {
@@ -354,7 +353,6 @@ blockquote {
     color: var(--happy-brown);
 }
 
-
 .popup-title a {
     float: right;
     color: var(--happy-brown);
@@ -377,7 +375,7 @@ li {
     padding-left: 23px;
 }
 
-.popup-footer{
+.popup-footer {
     color: var(--happy-brown);
     margin-top: auto;
     padding: 20px;
@@ -395,13 +393,18 @@ li {
     color: var(--happy-blue);
     font-size: 2rem;
     line-height: 53px;
+    transition: all 0.5s ease;
+}
+
+#contact a:hover {
+    color: var(--happy-brown);
 }
 
 strong {
     font-weight: 500;
 }
 
-footer { 
+footer {
     text-align: center;
     color: #555;
     margin-bottom: 20px;
@@ -409,8 +412,8 @@ footer {
 
 /* Typing effect */
 #intro-text {
-	display: inline-block;
-	vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 3.5rem;
     font-weight: 300;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -419,21 +422,22 @@ footer {
 }
 
 #cursor {
-	display: inline-block;
-	vertical-align: middle;
-	width: 3px;
-	height: 50px;
-	background-color: white;
-	animation: blink .75s step-end infinite;
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 50px;
+    background-color: white;
+    animation: blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
-	from, to { 
-		background-color: transparent 
-	}
-	50% { 
-		background-color: white; 
-	}
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
 }
 
 /*
@@ -491,8 +495,6 @@ footer {
     .popup-body li {
         line-height: 20px;
     }
-
-
 }
 
 @media (max-width: 1088px) {
@@ -546,10 +548,10 @@ footer {
     #intro #intro-text {
         font-size: 3rem;
     }
-    
+
     /* Experience Card */
     .exp-card {
-        width: 90%
+        width: 90%;
     }
     .exp-card li {
         line-height: 25px;
@@ -588,7 +590,7 @@ footer {
 
     /* Experience card */
     .exp-card {
-        width: 95%
+        width: 95%;
     }
     .exp-card-header {
         display: block;
@@ -612,7 +614,7 @@ footer {
     .card-popup .popup-title {
         font-size: 1.2rem;
     }
-    
+
     .popup-body li {
         line-height: 20px;
     }
