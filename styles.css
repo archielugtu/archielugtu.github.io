@@ -107,7 +107,7 @@ body a {
     background-color: #f9f1ff;
 }
 
-#about.selected {
+#about-link.selected {
     border-left: 10px solid var(--happy-blue);
     background-color: #f9f1ff;
 }
