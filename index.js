@@ -75,7 +75,7 @@ for (let card of projectCards) {
     });
 }
 
-// Adding an a click event to the 'x' button of pop up card
+// Adding a click event to the 'x' button of pop up card
 const popupCloseButtons = document.querySelectorAll(".popup-x-btn");
 for (let button of popupCloseButtons) {
     button.addEventListener("click", function () {
@@ -128,3 +128,39 @@ function closeCardPopUp() {
 const scroll = new SmoothScroll('#sidebar a[href*="#"], #navbar a[href*="#"]', {
     speed: 500,
 });
+
+// Sidebar item selected
+const about = document.querySelector("#about-link")
+const experiences = document.querySelector("#experiences-link")
+const projects = document.querySelector("#projects-link")
+const contact = document.querySelector("#contact-link")
+
+
+about.addEventListener('click', () => {
+    about.classList.add("selected")
+    experiences.classList.remove("selected")
+    projects.classList.remove("selected")
+    contact.classList.remove("selected")
+})
+
+experiences.addEventListener('click', () => {
+    experiences.classList.add("selected")
+    about.classList.remove("selected")
+    projects.classList.remove("selected")
+    contact.classList.remove("selected")
+})
+
+projects.addEventListener('click', () => {
+    projects.classList.add("selected")
+    experiences.classList.remove("selected")
+    about.classList.remove("selected")
+    contact.classList.remove("selected")
+    
+})
+
+contact.addEventListener('click', () => {
+    contact.classList.add("selected")
+    experiences.classList.remove("selected")
+    projects.classList.remove("selected")
+    about.classList.remove("selected")
+})

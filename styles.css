@@ -94,7 +94,7 @@ body a {
     border-left: 10px solid var(--happy-blue);
     background-color: #f9f1ff;
 }
-#experience-link:hover {
+#experiences-link:hover {
     border-left: 10px solid var(--happy-green);
     background-color: #f9f1ff;
 }
@@ -103,6 +103,23 @@ body a {
     background-color: #f9f1ff;
 }
 #contact-link:hover {
+    border-left: 10px solid #ff8c00;
+    background-color: #f9f1ff;
+}
+
+#about.selected {
+    border-left: 10px solid var(--happy-blue);
+    background-color: #f9f1ff;
+}
+#experiences-link.selected {
+    border-left: 10px solid var(--happy-green);
+    background-color: #f9f1ff;
+}
+#projects-link.selected {
+    border-left: 10px solid #ff2015;
+    background-color: #f9f1ff;
+}
+#contact-link.selected {
     border-left: 10px solid #ff8c00;
     background-color: #f9f1ff;
 }
@@ -178,7 +195,7 @@ body a {
     text-transform: uppercase;
     font-size: 3rem;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .container {
@@ -538,7 +555,7 @@ footer {
     }
 
     #content section {
-        padding-top: 48px;
+        padding-top: 0;
     }
 
     #content #intro {
@@ -585,7 +602,7 @@ footer {
     }
 
     #content section {
-        padding-bottom: 0;
+        padding-bottom: 20px;
     }
 
     /* Experience card */
