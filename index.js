@@ -130,11 +130,17 @@ const scroll = new SmoothScroll('#sidebar a[href*="#"], #navbar a[href*="#"]', {
 });
 
 // Sidebar item selected
+const navbarName = document.querySelector(".nav-title")
+const sidebarName = document.querySelector("#sidebar-name")
+const sidebarSubtitle = document.querySelector("#sidebar-subtitle")
 const about = document.querySelector("#about-link")
 const experiences = document.querySelector("#experiences-link")
 const projects = document.querySelector("#projects-link")
 const contact = document.querySelector("#contact-link")
 
+navbarName.addEventListener('click', removeItemSelected)
+sidebarName.addEventListener('click', removeItemSelected)
+sidebarSubtitle.addEventListener('click', removeItemSelected)
 
 about.addEventListener('click', () => {
     about.classList.add("selected")
@@ -164,3 +170,10 @@ contact.addEventListener('click', () => {
     projects.classList.remove("selected")
     about.classList.remove("selected")
 })
+
+function removeItemSelected() {
+    about.classList.remove("selected")
+    experiences.classList.remove("selected")
+    projects.classList.remove("selected")
+    contact.classList.remove("selected")
+}
