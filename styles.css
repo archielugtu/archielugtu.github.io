@@ -1,27 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap"); /*===== VARIABLES CSS =====*/
 :root {
-    --sidebar-width: 190px;
-    --happy-blue: #509ec2;
-    --happy-brown: #795548;
-    --happy-green: #50c32b;
-    --card-height: 400px;
+  --sidebar-width: 190px;
+  --happy-blue: #509ec2;
+  --happy-brown: #795548;
+  --happy-green: #50c32b;
+  --card-height: 400px;
+  --margin-bottom: 40px;
 }
 
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
 body a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /*
@@ -31,142 +32,142 @@ body a {
  */
 
 #sidebar {
-    position: fixed;
-    float: left;
-    width: var(--sidebar-width);
-    height: 100%;
-    transition: left 0.3s;
-    background-color: whitesmoke;
-    -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
-    -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
-    box-shadow: 1px 0 5px 0 #aaaaaa;
-    z-index: 999;
+  position: fixed;
+  float: left;
+  width: var(--sidebar-width);
+  height: 100%;
+  transition: left 0.3s;
+  background-color: whitesmoke;
+  -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
+  -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
+  box-shadow: 1px 0 5px 0 #aaaaaa;
+  z-index: 999;
 }
 
 #sidebar.active {
-    left: 0;
+  left: 0;
 }
 
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    z-index: 998; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 998; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 
 #sidebar .menu-title {
-    height: 100%;
-    width: 100%;
-    padding: 20px 20px 5px 38px;
-    border-bottom: 2px solid #d3d3d3;
+  height: 100%;
+  width: 100%;
+  padding: 20px 20px 5px 38px;
+  border-bottom: 2px solid #d3d3d3;
 }
 
 #sidebar .menu-title h1 {
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 30px;
-    color: #5392d2;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 30px;
+  color: #5392d2;
 }
 
 #sidebar .menu-title span {
-    line-height: 35px;
-    color: var(--happy-brown);
+  line-height: 35px;
+  color: var(--happy-brown);
 }
 
 .menu .menu-item a {
-    color: #333333;
-    font-size: 15px;
-    display: block;
-    box-sizing: border-box;
-    line-height: 50px;
-    padding-left: 30px;
-    transition: border-left 0.5s;
+  color: #333333;
+  font-size: 15px;
+  display: block;
+  box-sizing: border-box;
+  line-height: 50px;
+  padding-left: 30px;
+  transition: border-left 0.5s;
 }
 
 #about-link:hover {
-    border-left: 10px solid var(--happy-blue);
-    background-color: #f9f1ff;
+  border-left: 10px solid var(--happy-blue);
+  background-color: #f9f1ff;
 }
 #experiences-link:hover {
-    border-left: 10px solid var(--happy-green);
-    background-color: #f9f1ff;
+  border-left: 10px solid var(--happy-green);
+  background-color: #f9f1ff;
 }
 #projects-link:hover {
-    border-left: 10px solid #ff2015;
-    background-color: #f9f1ff;
+  border-left: 10px solid #ff2015;
+  background-color: #f9f1ff;
 }
 #contact-link:hover {
-    border-left: 10px solid #ff8c00;
-    background-color: #f9f1ff;
+  border-left: 10px solid #ff8c00;
+  background-color: #f9f1ff;
 }
 
 #about-link.selected {
-    border-left: 10px solid var(--happy-blue);
-    background-color: #f9f1ff;
+  border-left: 7px solid var(--happy-blue);
+  background-color: #f9f1ff;
 }
 #experiences-link.selected {
-    border-left: 10px solid var(--happy-green);
-    background-color: #f9f1ff;
+  border-left: 7px solid var(--happy-green);
+  background-color: #f9f1ff;
 }
 #projects-link.selected {
-    border-left: 10px solid #ff2015;
-    background-color: #f9f1ff;
+  border-left: 7px solid #ff2015;
+  background-color: #f9f1ff;
 }
 #contact-link.selected {
-    border-left: 10px solid #ff8c00;
-    background-color: #f9f1ff;
+  border-left: 7px solid #ff8c00;
+  background-color: #f9f1ff;
 }
 
 .fab,
 .fas,
 .far {
-    margin-right: 10px;
-    color: var(--happy-brown);
-    transition: 0.5s;
+  margin-right: 10px;
+  color: var(--happy-brown);
+  transition: 0.5s;
 }
 .fa-github:hover {
-    color: black;
+  color: black;
 }
 .fa-linkedin:hover {
-    color: var(--happy-blue);
+  color: var(--happy-blue);
 }
 .fa-youtube:hover {
-    color: red;
+  color: red;
 }
 .fa-at:hover {
-    color: darkorange;
+  color: darkorange;
 }
 .fa-user-graduate:hover {
-    color: darkorange;
+  color: darkorange;
 }
 .fa-external-link-alt:hover {
-    color: darkgoldenrod;
+  color: darkgoldenrod;
 }
 .fab:hover,
 .fas:hover,
 .far:hover {
-    transform: scale(1.5);
-    /* box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25); */
+  transform: scale(1.5);
+  /* box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25); */
 }
 
 .fa-user {
-    color: var(--happy-blue);
+  color: var(--happy-blue);
 }
 .fa-chart-line {
-    color: #50c32b;
+  color: #50c32b;
 }
 .fa-window-restore {
-    color: #ff2015;
+  color: #ff2015;
 }
 .fa-envelope {
-    color: #ff8c00;
+  color: #ff8c00;
 }
 
 /*
@@ -176,122 +177,131 @@ body a {
  */
 
 #content {
-    position: relative;
-    display: block;
-    margin-left: 190px;
-    height: 100%;
-    background: url("/bg.png") repeat;
+  position: relative;
+  display: block;
+  margin-left: 190px;
+  height: 100%;
+  background: url("/bg.png") repeat;
 }
 
 #content section {
-    position: relative;
-    padding-bottom: 20px;
-    width: 100%;
+  position: relative;
+  /* padding-bottom: 20px; */
+  width: 100%;
 }
 
 .content-header {
-    background-color: var(--happy-blue);
-    padding: 25px 40px;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 30px;
+  background-color: var(--happy-blue);
+  padding: 25px 40px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: var(--margin-bottom);
 }
 
 .container {
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1280px;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 /* 
     INTRO CONTENT SECTION 
 */
 #intro {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("/intro-cover.jpeg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* background-attachment: fixed; doesn't work for apple phones*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/intro-cover.jpeg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background-attachment: fixed; doesn't work for apple phones*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 
     ABOUT CONTENT SECTION 
 */
 blockquote {
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: italic;
-    padding: 0 0 0 20px;
-    margin: 20px 0;
-    border-left: 3px solid var(--happy-brown);
-    color: var(--happy-brown);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0 0 0 20px;
+  margin: 20px 0;
+  border-left: 3px solid var(--happy-brown);
+  color: var(--happy-brown);
 }
 
 #about p {
-    font-size: 1.5rem;
-    line-height: 40px;
-    margin: 20px 0;
+  font-size: 1.5rem;
+  line-height: 40px;
+  margin: 20px 0;
 }
 
 #about p.account-links {
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid #d3d3d3;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #d3d3d3;
 }
 
 /* 
     EXPERIENCE CONTENT SECTION 
 */
 .exp-card {
-    position: relative;
-    width: 70%;
-    margin: 0 auto 15px auto;
-    padding: 10px 45px 10px 45px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: 75%;
+  margin: 0 auto var(--margin-bottom) auto;
+  padding: 10px 45px 10px 45px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .exp-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .exp-card .card-name {
-    margin-left: 15px;
-    font-size: 1.7rem;
-    font-weight: 400;
+  margin-left: 15px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hansaworld-exp-text {
+  color: var(--happy-blue);
+}
+
+.FIS-exp-text {
+  color: #4bcd3e;
 }
 
 .card-name .job {
-    display: block;
-    font-size: 1rem;
-    color: var(--happy-brown);
+  display: block;
+  font-size: 1rem;
+  color: var(--happy-brown);
 }
 
 .card-name .date {
-    font-size: 1rem;
-    line-height: 1px;
+  font-size: 1rem;
+  line-height: 1px;
 }
 
 .exp-card li {
-    list-style-position: inside;
-    line-height: 35px;
+  list-style-position: inside;
+  line-height: 35px;
 }
 
 /* 
@@ -299,162 +309,162 @@ blockquote {
 */
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
-    position: relative;
-    width: 30%;
-    min-height: var(--card-height);
-    background: #fff;
-    border: 1px solid #ccc;
-    margin-bottom: 50px;
-    transition: 0.5s;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: 30%;
+  min-height: var(--card-height);
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: var(--margin-bottom);
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
+  box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-container {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .card-header img {
-    width: 100%;
+  width: 100%;
 }
 
 .card-body {
-    padding: 10px 20px 30px 20px;
+  padding: 10px 20px 30px 20px;
 }
 
 .card-name {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--happy-blue);
-    font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--happy-blue);
+  font-weight: 400;
 }
 
 .card-info {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 /* POPUP CARD REVEAL */
 .card-popup {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100%;
-    top: 500px;
-    background-color: #fff;
-    transition: 0.5s;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  top: 500px;
+  background-color: #fff;
+  transition: 0.5s;
 }
 
 .card-popup.active {
-    top: 0;
+  top: 0;
 }
 
 .card-popup .popup-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 30px;
-    color: var(--happy-brown);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: var(--happy-brown);
 }
 
 .popup-title a {
-    float: right;
-    color: var(--happy-brown);
-    cursor: pointer;
+  float: right;
+  color: var(--happy-brown);
+  cursor: pointer;
 }
 
 .popup-body {
-    padding: 25px;
+  padding: 25px;
 }
 
 li {
-    list-style: disc;
-    list-style-position: outside;
-    line-height: 30px;
-    height: 100%;
-    font-size: 0.9rem;
+  list-style: disc;
+  list-style-position: outside;
+  line-height: 30px;
+  height: 100%;
+  font-size: 0.9rem;
 }
 
 .popup-body ul {
-    padding-left: 23px;
+  padding-left: 23px;
 }
 
 .popup-footer {
-    color: var(--happy-brown);
-    margin-top: auto;
-    padding: 20px;
-    border-top: 1px solid #d3d3d3;
+  color: var(--happy-brown);
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid #d3d3d3;
 }
 
 /* 
     CONTACT CONTENT SECTION 
 */
 #contact {
-    height: 600px;
+  height: 600px;
 }
 
 #contact a {
-    color: var(--happy-blue);
-    font-size: 2rem;
-    line-height: 53px;
-    transition: all 0.5s ease;
+  color: var(--happy-blue);
+  font-size: 2rem;
+  line-height: 53px;
+  transition: all 0.5s ease;
 }
 
 #contact a:hover {
-    color: var(--happy-brown);
+  color: var(--happy-brown);
 }
 
 strong {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 footer {
-    text-align: center;
-    color: #555;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #555;
+  padding-bottom: 20px;
 }
 
 /* Typing effect */
 #intro-text {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 3.5rem;
-    font-weight: 300;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    letter-spacing: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  letter-spacing: 2px;
 }
 
 #cursor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 3px;
-    height: 50px;
-    background-color: white;
-    animation: blink 0.75s step-end infinite;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 50px;
+  background-color: white;
+  animation: blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
-    from,
-    to {
-        background-color: transparent;
-    }
-    50% {
-        background-color: white;
-    }
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
 }
 
 /*
@@ -464,175 +474,178 @@ footer {
  */
 
 #navbar {
-    display: flex;
-    position: fixed;
-    top: -48px;
-    width: 100%;
-    height: 48px;
-    align-items: center;
-    background-color: whitesmoke;
-    z-index: 20;
+  display: flex;
+  position: fixed;
+  top: -48px;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  background-color: whitesmoke;
+  z-index: 20;
 }
 
 #navbar .nav-burger {
-    position: relative;
-    right: -20px;
-    z-index: 2;
+  position: relative;
+  right: -20px;
+  z-index: 2;
 }
 
 #navbar .nav-burger-line {
-    position: relative;
-    width: 33px;
-    height: 3px;
-    background-color: var(--happy-blue);
-    margin: 5px 0;
+  position: relative;
+  width: 33px;
+  height: 3px;
+  background-color: var(--happy-blue);
+  margin: 5px 0;
 }
 
 #navbar .nav-title {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: 400;
-    z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  z-index: 1;
 }
 
 .nav-title a {
-    color: var(--happy-blue);
+  color: var(--happy-blue);
 }
 
 @media (max-width: 1300px) {
-    .exp-card {
-        width: 90%;
-    }
-    .card-popup .popup-title {
-        font-size: 1.2rem;
-    }
+  .exp-card {
+    width: 90%;
+  }
+  .card-popup .popup-title {
+    font-size: 1.2rem;
+  }
 
-    .popup-body li {
-        line-height: 20px;
-    }
+  .popup-body li {
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 1088px) {
-    /*
+  /*
     ======================
     ===== Navbar CSS =====
     ======================
     */
-    #navbar {
-        -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
-        -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
-        box-shadow: 1px 0 5px 0 #aaaaaa;
-        top: 0;
-    }
+  #navbar {
+    -moz-box-shadow: 1px 0 5px 0 #aaaaaa;
+    -webkit-box-shadow: 1px 0 5px 0 #aaaaaa;
+    box-shadow: 1px 0 5px 0 #aaaaaa;
+    top: 0;
+  }
 
-    /*
+  /*
     ======================
     ===== Sidebar CSS ====
     ======================
     */
-    #sidebar {
-        position: fixed;
-        left: -195px;
-    }
+  #sidebar {
+    position: fixed;
+    left: -195px;
+  }
 
-    /*
+  /*
     ======================
     ===== Content CSS ====
     ======================
     */
-    #content {
-        margin-left: 0;
-    }
+  #content {
+    margin-left: 0;
+  }
 
-    .content-header {
-        font-size: 2.5rem;
-    }
+  .content-header {
+    font-size: 2.5rem;
+  }
 
-    .container {
-        width: 80%;
-    }
+  .container {
+    width: 80%;
+  }
 
-    #content section {
-        padding-top: 0;
-    }
+  #content section {
+    padding-top: 45px;
+  }
 
-    #content #intro {
-        margin-bottom: -48px;
-        background-position-x: 20%;
-    }
-    #intro #intro-text {
-        font-size: 3rem;
-    }
+  #content #intro {
+    margin-bottom: -48px;
+    background-position-x: 20%;
+  }
+  #intro #intro-text {
+    font-size: 3rem;
+  }
 
-    /* Experience Card */
-    .exp-card {
-        width: 90%;
-    }
-    .exp-card li {
-        line-height: 25px;
-    }
+  /* Experience Card */
+  .exp-card {
+    width: 100%;
+  }
 
-    /* Project Card */
-    .card {
-        width: 45%;
-    }
+  .exp-card li {
+    line-height: 25px;
+  }
+
+  /* Project Card */
+  .card {
+    width: 45%;
+  }
 }
 
 @media (max-width: 735px) {
-    #content #intro {
-        background-position-x: 40%;
-    }
-    #intro #intro-text {
-        font-size: 1.5rem;
-    }
+  #content #intro {
+    background-position-x: 40%;
+  }
+  #intro #intro-text {
+    font-size: 1.5rem;
+  }
 
-    .container {
-        width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
 
-    blockquote {
-        font-size: 1.5rem;
-    }
+  blockquote {
+    font-size: 1.5rem;
+  }
 
-    #about p {
-        font-size: 1rem;
-        line-height: 25px;
-    }
+  #about p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
 
-    #content section {
-        padding-bottom: 20px;
-    }
+  #content section {
+    /* Adds extra spacing to fix the mobile screen size issue. DON'T CHANGE */
+    padding-bottom: 20px;
+  }
 
-    /* Experience card */
-    .exp-card {
-        width: 95%;
-    }
-    .exp-card-header {
-        display: block;
-        text-align: center;
-    }
+  /* Experience card */
+  .exp-card {
+    width: 95%;
+  }
+  .exp-card-header {
+    display: block;
+    text-align: center;
+  }
 
-    .exp-card .card-name {
-        font-size: 1.5rem;
-    }
+  .exp-card .card-name {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
 
-    /* Project Card */
-    .card {
-        width: 90%;
-    }
+  /* Project Card */
+  .card {
+    width: 90%;
+  }
 
-    #contact a {
-        font-size: 1.3rem;
-        line-height: 40px;
-    }
+  #contact a {
+    font-size: 1.3rem;
+    line-height: 40px;
+  }
 
-    .card-popup .popup-title {
-        font-size: 1.2rem;
-    }
+  .card-popup .popup-title {
+    font-size: 1.2rem;
+  }
 
-    .popup-body li {
-        line-height: 20px;
-    }
+  .popup-body li {
+    line-height: 20px;
+  }
 }
