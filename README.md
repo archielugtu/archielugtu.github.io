@@ -1,2 +1,2 @@
-# rchilugtu.github.io
+# archielugtu.github.io
 Portfolio built from scratch with pure HTML, CSS, and Javascript.
