@@ -1,6 +1,6 @@
 // List of sentences
 var _CONTENT = [
-    "Hi, I'm Rchi Lugtu.",
+    "Hi, I'm Archie Lugtu.",
     "I'm a Software Engineer.",
     "I like to create things.",
 ];
